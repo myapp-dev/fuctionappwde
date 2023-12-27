@@ -1,5 +1,5 @@
 # Build output
-target/
+
 *.class
 
 # Log file
@@ -12,8 +12,6 @@ target/
 .mtj.tmp/
 
 # Package Files #
-*.jar
-*.war
 *.ear
 *.zip
 *.tar.gz
