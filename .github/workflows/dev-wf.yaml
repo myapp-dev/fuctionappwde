@@ -14,7 +14,7 @@ env:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubundu-latest
     
     steps:
       - name: 'Azure Login'
@@ -31,7 +31,7 @@ jobs:
           java-version: ${{ env.JAVA_VERSION }}
 
       - name: 'Restore Project Dependencies Using Mvn'
-        shell: pwsh
+        shell: bash
         run: |
           pushd './${{ env.PACKAGE_DIRECTORY }}'
           mvn clean package
@@ -39,7 +39,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: windows-latest
+    runs-on: ubundu-latest
 
     steps:
       - name: 'Azure Login'
